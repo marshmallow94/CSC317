@@ -1,7 +1,5 @@
 body {
   padding-top: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
   font-family: 'Encode Sans', sans-serif;
   text-align: center;
   margin-left: auto;
@@ -22,6 +20,14 @@ h1{
   margin-bottom: 35px;
   font-size: 60px;
   text-emphasis: 20;
+}
+
+.invalid-text ::before {
+  content: "❌";
+}
+
+.valid-text ::before{
+  content: "✅";
 }
 
 .nav-items{
@@ -51,11 +57,12 @@ h1{
 }
 
 .input-box{
+  width: 100%;
   border:1px solid #ccc;
   font-size: x-small;
   box-shadow: 2px 2px 10px #eee;
   padding: 8px;
-  text-align: end;
+  text-align: left;
   border-radius: 5%;
 }
 
@@ -83,12 +90,13 @@ h3{
   font-size: 25px;
 }
 
-div {
+form > div {
   color: #745c5c;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
   width: 500px;
-  padding-left: 300px;
+  padding: auto;
+  padding-left: 30%;
   margin-inline: 20px;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -100,4 +108,54 @@ footer{
   color: #745c5c;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: end;
+}
+
+p{
+  color: #979294;
+  font-size:small;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0.2%;
+  margin-bottom: 0%;
+}
+
+
+.list {
+  /* margin-top: 0%;
+  margin-left: 20%;
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(3, 40px);
+  grid-auto-rows: 15vh;
+  gap: 12rem;
+  padding: 1em; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-card {
+  width: 20%;
+  /* display: grid;
+  margin-top: 0;
+  width: 250px;
+  height: 50px;
+  border-radius: .35em;
+  grid-template-areas: "info"; */
+}
+
+
+
+.post-title::before{
+  content: "Title: ";
+}
+
+.removed{
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.count{
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: right;
+  margin: 0 5% 2% 0;
 }

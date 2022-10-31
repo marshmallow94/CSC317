@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/validation.js"></script>
 
 </head>
     <body>
@@ -23,38 +24,45 @@
         </header>
             <main>
                 <section>
-                    <form>
+                    <form method="post"  action="registration.html"  onsubmit="return validateForm();">
                         <div>
-                           <label class ="input-label" for="username">Username</label>
+                           <label class ="input-label" for="username">Username</label><br>
                             <input class = "input-box" type="text" name="username" id="username" placeholder="Username"><br>
+                            <p id = "alpha" >starts with an alphabet character</p>
+                            <p id = "alphanum" >contains at least 3 alphanumeric characters</p>
                         </div>
                         <div>
-                            <label class ="input-label" for="emailaddress">Email Address</label>
-                            <input class = "input-box" type="text" name="emailaddress" id="emailaddress" placeholder="Email Address"><br>
+                            <label class ="input-label" for="emailaddress">Email Address</label><br>
+                            <input class = "input-box" type="email" name="emailaddress" id="emailaddress" placeholder="Email Address"><br>
                         </div>
                         <div>
-                            <label class ="input-label" for="passward">Password</label>
+                            <label class ="input-label" for="passward">Password</label><br>
                             <input  class = "input-box"  type="password" name="password" id="Password" placeholder="Password"><br>
+                            <p id = "len" >has at least 8 characters</p>
+                            <p id = "upper" >contains at least 1 uppercase character</p>
+                            <p id = "num" >contains at least 1 number character</p>
+                            <p id = "special" >contains at least 1 special character</p>
                         </div>
                         <div>
-                            <label class ="input-label" for="passward">Confirm Password</label>
-                            <input class = "input-box" type="password" name="confirm_password" id="Password" placeholder="Password"><br>
+                            <label class ="input-label" for="passward">Confirm Password</label><br>
+                            <input class = "input-box" type="password" name="confirm_password" id="Confirm_Password" placeholder="Password"><br>
+                            <p id = "match" >matches password above</p>
                         </div>
                         <div>
-                            <input type="checkbox" id="ageVerificaion" name="ageVerificaion">
+                            <input type="checkbox" id="ageVerificaion" name="ageVerificaion" required>
                             <label for="ageVerificaion">I am 13 or over </label><br>
                         </div>
                         <div>
-                            <input type="checkbox" id="TOS_Privacy" name="TOS_Privacy">
+                            <input type="checkbox" id="TOS_Privacy" name="TOS_Privacy" required>
                             <label for="TOS_Privacy">I agree to the </label>
                             <a href="TOS_Privacy">Terms of Service</a>
                             <label for="TOS_Privacy"> and give consent to collect, use and store my data according to our </label>
                             <a href="TOS_Privacy">Privacy Policy</a><br>
                         </div>
             
-                        <input class = "buttons" type="submit" value="Submit">
-            
+                        <input class = "buttons" type="submit" value="Submit"  >
                     </form>
+                    
                 </section>
             </main>
         
