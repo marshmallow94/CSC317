@@ -4,13 +4,6 @@ function buildCardsUsinJSAPI(containter, data) {
     let cardDiv = document.createElement("div"); //create div element
     cardDiv.addEventListener('click', function(ev){
       console.log(ev.currentTarget);
-        // let a = 0.5;
-        // ev.currentTarget.style.opacity = a;
-
-        
-        // if(a == 0){
-        //     ev.currentTarget.remove()
-        // }
         let elem = ev.target.classList.contains("post-card") ? ev.target: ev.target.parentNode;
         elem.classList.add("removed");
         setTimeout(()=>{
