@@ -1,13 +1,38 @@
     <body>
         <main>  
-            <p class = "count">
-                Count : <span id="count"></span>
-            </p>
             <section>
+                {{#if keyword}}
+      <div class="search-text">
+        <div>
+          <span>Results for </span>
+          <span>"{{keyword}}"</span>
+        </div>
+        <button id="reset-keyword" class="color-button">RESET</button>
+      </div>
+    {{/if}}
                 <div id = "list" class="list" >
-
+                {{#if posts}}
+                
+                    {{#each posts}}
+                    <div class="post-card" id={{this.id}}>
+                        <img src={{this.thumbnail}} alt="test" class="photo-img" />
+                        <div class="photo-title">
+                        <b>{{this.title}}</b>
+                        <div>[ click to see ]</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                
+                {{/if}}
                 </div>
+                </section>
             </section>
-
-        </main>
-    </body>
+            </main>
+            <script>
+            const photoCards = document.getElementsByClassName("post-card"); for(let
+            i=0;i<photoCards.length;i++) { photoCards[i].addEventListener('click',
+            function() { window.location.replace(`/viewpost/${photoCards[i].id}`) }) }
+            const resetBtn = document.getElementById("reset-keyword"); if(resetBtn) {
+            resetBtn.addEventListener('click', function() { window.location.replace('/')
+            }); }
+            </script></body>

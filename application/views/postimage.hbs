@@ -2,7 +2,11 @@
         <main>
             <h2>Post Image</h2>
             <section>
-                <form >
+                <form class="form-container"
+                    method="POST"
+                    action="/posts/create"
+                    enctype="multipart/form-data"
+                    id="post-form">
                     <div>
                         <label for="username">Post Title</label>
                         <input class = "input-box" type="text" name="title" id="title" placeholder="Post Title"><br>
@@ -12,8 +16,8 @@
                         <input  class = "input-box" type="description" name="description" id="description" placeholder="Description"><br>
                     </div>
                     <div>
-                        <label for="upload">Select Image</label>
-                        <input type="file" accept=".jpg, .jpeg, .png" id="image"><br>
+                        <label for="input-label">Select Image</label>
+                        <input name="image" type="file" accept=".jpg, .jpeg, .png" id="image"><br>
                     </div>
                     <div>
                         <input type="checkbox" id="policy" name="policy">
@@ -22,7 +26,7 @@
                         <label for="policy"> for uploading the images </label><br>
                     </div>
                     
-                        <input class = "buttons"  type="button" value="Submit">
+                        <input class = "buttons"  type="submit" value="Submit">
                     
         
                 </form>

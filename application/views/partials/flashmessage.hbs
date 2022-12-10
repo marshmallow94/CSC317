@@ -1,0 +1,33 @@
+
+<div id="flash-message">
+{{#if messages.error}}
+    <div id="alert-danger" class="flash-alert">
+        {{messages.error}}
+    </div>
+{{else}}
+    <div id="alert-success" class="flash-alert">
+        {{messages.success}}
+    </div>
+{{/if}}
+    <script>
+      const error = document.getElementById("alert-danger");
+      const success = document.getElementById("alert-success");
+      if(error) {
+        console.log('this is hit');
+        Toastify({
+            text: error.textContent,
+            duration: 3000,
+            position: "center", 
+            stopOnFocus: true,
+            backgroundColor: "#f44336",
+        }).showToast();
+      }else {
+        Toastify({
+            text: success.textContent,
+            duration: 3000,
+            position: "center", 
+            stopOnFocus: true,
+        }).showToast();
+      }
+    </script>
+</div>

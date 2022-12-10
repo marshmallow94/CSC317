@@ -1,0 +1,31 @@
+<main>
+  <section>
+    <h3 class="primary-text">My Posts</h3>
+    
+    {{#if posts}}
+      <div class="list">
+        {{#each posts}}
+          <div class="post-card" id={{this.id}}>
+            <img src={{this.thumbnail}} alt="test" class="photo-img" />
+            <div class="photo-title">
+              <b>{{this.title}}</b>
+              <div>[ click to see ]</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      <div>
+        You have no posts.
+      </div>
+    {{/if}}
+  </section>
+</main>
+<script>
+  const photoCards = document.getElementsByClassName("post-card"); for(let
+  i=0;i<photoCards.length;i++) { photoCards[i].addEventListener('click',
+  function() { window.location.replace(`/viewpost/${photoCards[i].id}`) }) }
+  const resetBtn = document.getElementById("reset-keyword");
+  resetBtn.addEventListener('click', function() { window.location.replace('/')
+  });
+</script>

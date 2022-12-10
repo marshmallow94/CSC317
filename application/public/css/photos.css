@@ -1,0 +1,44 @@
+#photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .photo-card {
+    width: calc(33% - 16px);
+    height: calc(33% - 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .photo-img {
+    object-fit: contain;
+    width: 164px;
+    height: 164px;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition-duration: 1s;
+  }
+  
+  .photo-title {
+    background-color: silver;
+    padding: 8px;
+  }
+  
+  .photo-title > b {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .photo-card {
+      width: calc(20% - 16px);
+    }
+  }
+  

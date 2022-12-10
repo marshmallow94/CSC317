@@ -3,7 +3,8 @@
         <h2>Registration</h2>
             <main>
                 <section>
-                    <form method="post"  action="registration.html"  onsubmit="return validateForm();">
+                    <form method="post"  action="/users/registration" id = "regi-form"
+                    enctype="application/x-www-form-urlencoded"  onsubmit="return validateForm();">
                         <div>
                            <label class ="input-label" for="username">Username</label><br>
                             <input class = "input-box" type="text" name="username" id="username" placeholder="Username"><br>
@@ -12,7 +13,7 @@
                         </div>
                         <div>
                             <label class ="input-label" for="emailaddress">Email Address</label><br>
-                            <input class = "input-box" type="email" name="emailaddress" id="emailaddress" placeholder="Email Address"><br>
+                            <input class = "input-box" type="email" name="email" id="emailaddress" placeholder="Email Address"><br>
                         </div>
                         <div>
                             <label class ="input-label" for="passward">Password</label><br>

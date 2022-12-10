@@ -1,9 +1,31 @@
 <nav>
-                <ul>
-                    <li><a class ="nav-items" href="index">Home</a></li>
-                    <li><a class ="nav-items" href="login">Login</a></li>
-                    <li><a class ="nav-items" href="registration">Registration</a></li>
-                    <li><a class ="nav-items" href="postimage">Post Image</a></li>
-                    <li><a class ="nav-items" href="viewpost">View Post</a></li>
+    <div class="searchbar">
+                        <i class="fa fa-search"></i>
+                        <input
+                        class="search-box"
+                        name="keyword"
+                        id="keyword"
+                        type="text"
+                        placeholder="search"
+                    </li>
+                </div>
+                    <li><a class ="nav-items" href="/">Home</a></li>
+                    
+                    {{#if isLoggedIn}}
+                        <li><a class ="nav-items" id="logout">Log Out</a></li>
+                        <li><a class ="nav-items" href="/postimage">Post Image</a></li>
+                        <li><a  class="nav-items" href="/myPost" id="myPost" >My Post</a> </li>
+                    {{else}}
+                        <li><a class ="nav-items" href="/login">Log in</a></li>
+                        <li><a class ="nav-items" href="/registration">Registration</a></li>
+                    {{/if}}
+                    
+                    
                 </ul>
             </nav>
+
+            <script>
+  const keywordInput = document.getElementById("keyword");
+  keywordInput.addEventListener('keypress', function(event) { if (event.key ===
+  "Enter") { window.location.replace(`/?keyword=${keywordInput.value}`); } });
+</script>

@@ -142,6 +142,7 @@ p{
 
 .post-card {
   width: 20%;
+  align-self: center;
   /* display: grid;
   margin-top: 0;
   width: 250px;
@@ -150,11 +151,62 @@ p{
   grid-template-areas: "info"; */
 }
 
+.search-text {
+  width: 100%;
+  font-size: x-small;
+  padding: 8px;
+  text-align: right;
+  padding-right: 30%;
+  border-radius: 5%;
+  margin-right: auto;
+}
+
+.searchbar {
+
+  padding-bottom: 50px;
+  padding-right: 10px;
+  margin: auto;
+  align-self: flex-end;
+}
+
 
 
 .post-title::before{
   content: "Title: ";
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+
+  padding: auto;
+ 
 }
+
+.post-user::before{
+  content: "Author: ";
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+
+  padding: auto;
+
+}
+
+.post-title {
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+
+  padding: auto;
+}
+.post-info {
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: right;
+
+  padding: auto;
+  padding-right: 30%;
+}
+
 
 .removed{
   opacity: 0;
@@ -166,4 +218,22 @@ p{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: right;
   margin: 0 5% 2% 0;
+}
+
+.flash-alert {
+  display: none;
+}
+
+.post-section > div {
+  color: #745c5c;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: right;
+  padding: auto;
+  padding-right: 30%;
+}
+
+.post-section {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
