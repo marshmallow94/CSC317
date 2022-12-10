@@ -8,20 +8,25 @@ Please follow the instructions below and fill in the information requested when 
 
 ## Student Information
 
-|               |    Information     |
-|:-------------:|:------------------:|
-| Student Name  |   Marie Shimizu    |
-| Student ID    |     922962700      |
-| Student Email | mshimizu4@sfsu.edu |
+|               |    Information    |
+| :-----------: |  :--------------: |
+| Student Name  |    Marie Shimizu  |
+|  Student ID   |     922962700     |
+| Student Email |mshimizu4@sfsu.edu |
 
+# Database
 
+1. check conf > database.js for the database information
 
-# Build/Run Instructions
+# Build Instructions
+
+1. npm run build (make sure that your current directory is application)
 
 ## Build Instructions
-1. steps here
-2. steps here
+
+1. npm install (make sure that your current directory is application)
 
 ## Run Instructions
-1. steps here
-2. steps here 
+
+1. npm start (make sure that your current directory is application)
+2. open http://localhost:3000/
